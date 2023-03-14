@@ -1,0 +1,13 @@
+Star Wars Character Classification
+- Based on character's many traits, i.e. birth year, gender, eye color, hair color, mass etc., we will classify homeworld of the character. Which can be Naboo, Tatooine etc.
+
+Dataset link: https://www.kaggle.com/datasets/ulrikthygepedersen/star-wars-characters
+
+Challege
+- This dataset has unbalanced classes and it would be insteresting see how different optimizers and different model architecture reacts to it.
+
+Training
+- We will use different optimizers like Adam, SGD etc.with the combinations of different model architecture and if we can find it, implementation of transfer learning as well.
+
+Evaluation
+- Since dataset is imbalanced, we would be using F1-score and Average AUC to get correct evaluation of models.
