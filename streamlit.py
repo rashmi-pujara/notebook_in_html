@@ -5,6 +5,12 @@ import io
 
 from transformers import MobileViTFeatureExtractor, MobileViTForImageClassification
 
+model_checkpoint = "valurank/distilroberta-news-small"
+model = pipeline("text-classification", model=model_checkpoint)
+
+
+
+
 def load_image():
     uploaded_file = st.file_uploader(label='Pick an image to test')
     if uploaded_file is not None:
@@ -38,5 +44,5 @@ def main():
         predicted_class_idx = logits.argmax(-1).item()
         st.metric("Predicted class:", model.config.id2label[predicted_class_idx])
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
