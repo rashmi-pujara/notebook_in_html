@@ -5,12 +5,6 @@ import io
 
 from transformers import MobileViTFeatureExtractor, MobileViTForImageClassification
 
-model_checkpoint = "valurank/distilroberta-news-small"
-model = pipeline("text-classification", model=model_checkpoint)
-
-
-
-
 def load_image():
     uploaded_file = st.file_uploader(label='Pick an image to test')
     if uploaded_file is not None:
